@@ -15,10 +15,20 @@ const io = new Server(server, {
 });
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.error("Error connecting to MongoDB:", err);
+  });
+
+// Define a root route
+app.get("/", (req, res) => {
+  res.send("Welcome to the Anonymous Chat App Backend!");
 });
+
+
 
 // Define Conversation Schema
 const conversationSchema = new mongoose.Schema({
