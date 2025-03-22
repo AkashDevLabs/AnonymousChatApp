@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    
+    "preinstall": "npx npm-force-resolutions",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "resolutions": {
+    "postcss": "^8.5.3",
+    "nth-check": "^2.1.1",
+    "resolve-url-loader": "^5.0.0"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +21,24 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.12.1",
+    "nth-check": "^2.1.1",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "semver": "^7.7.1",
+    "serialize-javascript": "^6.0.2",
+    "shell-quote": "^1.8.2",
     "socket.io": "^4.8.1",
-    "socket.io-client": "^4.8.1"
+    "socket.io-client": "^4.8.1",
+    "sockjs": "^0.3.24",
+    "terser": "^5.39.0",
+    "tough-cookie": "^5.1.2",
+    "webpack-dev-middleware": "^7.4.2",
+    "yargs-parser": "^21.1.1"
+  },
+  "devDependencies": {
+    "npm-force-resolutions": "^0.0.10"
   }
 }
